@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: app
-  replicas: 2 # indica al controlador que ejecute 2 pods
+  replicas: 1 # indica al controlador que ejecute 2 pods
   template:
     metadata:
       labels:
@@ -17,4 +17,11 @@ spec:
         image: acalderon88/kube-training
         ports:
         - containerPort: 8080
+         resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
 
