@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: app-test
-        image: acalderon88/kube-training
+        image: acalderon88/kube-training:1.0.0
         ports:
         - containerPort: 8080
         resources:
           requests:
-            memory: "64Mi"
+            memory: "128M"
             cpu: "250m"
           limits:
-            memory: "128Mi"
+            memory: "256M"
             cpu: "500m"
 
